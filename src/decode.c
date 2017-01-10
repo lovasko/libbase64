@@ -3,9 +3,9 @@
 static uint8_t
 decode(char c)
 {
-	if (c >= 'A' && c <= 'Z') return (c - 'A');
-	if (c >= 'a' && c <= 'z') return (c - 'a') + 26;
-	if (c >= '0' && c <= '9') return (c - '0') + 52;
+	if (c >= 'A' && c <= 'Z') return (uint8_t)(c - 'A');
+	if (c >= 'a' && c <= 'z') return (uint8_t)(c - 'a') + 26;
+	if (c >= '0' && c <= '9') return (uint8_t)(c - '0') + 52;
 	if (c == '+')             return 62;
 	if (c == '/')             return 63;
 

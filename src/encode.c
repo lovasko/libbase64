@@ -6,9 +6,9 @@ encode(uint8_t i)
   if (i >= 64) return '\0';
   if (i == 63) return '/';
   if (i == 62) return '+';
-  if (i >= 52) return '0' + (i - 52);
-  if (i >= 26) return 'a' + (i - 26);
-  if (i >= 0)  return 'A' + (i);
+  if (i >= 52) return (char)('0' + (i - 52));
+  if (i >= 26) return (char)('a' + (i - 26));
+  if (i >= 0)  return (char)('A' + i);
 
   return '?';
 }
